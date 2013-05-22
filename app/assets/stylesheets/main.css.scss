@@ -1,28 +1,62 @@
+#clearfix {clear:both;}
+
 section#question-form {
 	width: 1000px;
 	margin: 0 auto;
 	position: relative;
-	border: 1px solid;
 
-	form {
+	section.form {
 		width: 500px;
-		margin:0 auto;
+		margin: 0 auto;
 
 		input, textarea {
-			width:100%;
+			width: 100%;
 		}
 		select {
-			width:60%;
+			width: 60%;
 		}
 		button {
-			width:30%;
-			float:right;
+			width: 30%;
+			float: right;
 		}
 	}
 
-	img {
-		margin:0 auto; width:75px;
+	section.profile-photo {
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		top: 0px;
+		left: 150px;
 	}
+}
+
+section#answers {
+	background: #E3E3E3;
+	padding-top: 50px;
+
+	article#answer {
+		margin: 10px auto;
+		width: 1000px;
+
+
+		.profile-photo {
+			float: left;
+		}
+
+		.answer {
+			float: right;
+			border: 1px solid;
+			width:850px;
+			height:auto;
+			padding:11px;
+
+			p {
+				margin:0;
+				font-size:14px;
+			}
+		}
+	}
+
 }
 
 /* mixins, variables, etc. */
