@@ -1,6 +1,5 @@
 Oldtimers::Application.routes.draw do
-  get "default_pages/home"
-  get "default_controller/home"
+  root to: 'default_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
