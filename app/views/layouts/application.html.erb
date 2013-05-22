@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Oldtimers</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Porsche 911 Targa Community | Mobiel Erfgoed Centrum</title>
+  <meta name="description" content="Website voor de commmunity van de Porsche 911 in opdracht van het Mobiel Erfgoed Centrum">
+  <meta name="author" content="Jeroen Rietveld and Wesley Smits">
+  <link rel="publisher" href="#"/>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %> 
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <section class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
-    </div>
+    </section>
   </body>
 </html>

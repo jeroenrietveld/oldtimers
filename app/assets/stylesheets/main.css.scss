@@ -1,0 +1,26 @@
+section#question-form {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid;
+
+	form {
+		width: 500px;
+		margin:0 auto;
+
+		input, textarea {
+			width:100%;
+		}
+		select {
+			width:60%;
+		}
+		button {
+			width:30%;
+			float:right;
+		}
+	}
+
+	img {
+		margin:0 auto; width:75px;
+	}
+}
