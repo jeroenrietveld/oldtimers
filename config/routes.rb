@@ -1,4 +1,6 @@
 Oldtimers::Application.routes.draw do
+  resources :questions
+
   get "questions/new"
   root to: 'default_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
