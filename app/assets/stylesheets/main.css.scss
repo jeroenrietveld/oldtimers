@@ -1,13 +1,33 @@
+html, body {
+	height:100%;
+	width:100%;
+}
+
 #clearfix {clear:both;}
+
+section.container {
+	width:100%;
+	height:100%;
+}
 
 section#question-form {
 	width: 1000px;
+	height:50%;
 	margin: 0 auto;
 	position: relative;
+	min-height:400px;
 
 	section.form {
-		width: 500px;
-		margin: 0 auto;
+		width:100%;
+		position:absolute;
+		top:25%;
+		left:25%;
+		bottom:25%;
+		right:25%;
+
+		form {
+			width:500px;
+		}
 
 		input, textarea {
 			width: 100%;
@@ -25,34 +45,49 @@ section#question-form {
 		width: 75px;
 		height: 75px;
 		position: absolute;
-		top: 0px;
-		left: 150px;
+		top: 25%;
+		left: 15%;
+		bottom:25%;
+		right:15%;
 	}
 }
 
 section#answers {
 	background: #E3E3E3;
 	padding-top: 50px;
+	height:50%;
 
 	article#answer {
 		margin: 10px auto;
 		width: 1000px;
 
-
 		.profile-photo {
 			float: left;
+			background:#eee;
 		}
 
 		.answer {
+			position:relative;
 			float: right;
 			border: 1px solid;
 			width:850px;
 			height:auto;
 			padding:11px;
+			background:#eee;
 
 			p {
 				margin:0;
 				font-size:14px;
+			}
+			.favorite {
+				position:absolute;
+				top:5px;
+				right:5px;
+			}
+			.comment {
+				position:absolute;
+				bottom:5px;
+				right:5px;
 			}
 		}
 	}
