@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 html, body {
 	height:100%;
 	width:100%;
@@ -52,12 +54,12 @@ section#question-form {
 	}
 }
 
-section#answers {
+section#questions {
 	background: #E3E3E3;
 	padding-top: 50px;
 	height:50%;
 
-	article#answer {
+	article#question {
 		margin: 10px auto;
 		width: 1000px;
 
@@ -66,7 +68,7 @@ section#answers {
 			background:#eee;
 		}
 
-		.answer {
+		.question {
 			position:relative;
 			float: right;
 			border: 1px solid;
