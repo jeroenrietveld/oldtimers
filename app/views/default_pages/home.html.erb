@@ -15,49 +15,23 @@
 	</section>
 </section>
 
-<section id="answers">
+<section id="questions">
 	<% for @question in @questions %>
 		<%= @question.title %>
 	<% end %>
-	<article id="answer">
+	<article id="question">
 		<section class="profile-photo">
-			<img src="" alt="" width="75" height="75"/>
+			<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
 		</section>
-		<section class="answer">
+		<section class="question">
 			<p>Dit is het eerste antwoord op deze vraag!</p>
 			<p>Categorie Dak Onderhoud</p>
 			<p>47 minuten geleden.</p>
-			<img class="favorite" src="" alt="Favorite" width="30" height="30"/>
-			<img class="comment"src="" alt="Comment" width="30" height="30"/>
-		</section>
-		<div id="clearfix"></div>
-	</article>
+			
+			<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
+			<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
 
-	<article id="answer">
-		<section class="profile-photo">
-			<img src="" alt="" width="75" height="75"/>
-		</section>
-		<section class="answer">
-			<p>Dit is het eerste antwoord op deze vraag!</p>
-			<p>Categorie Dak Onderhoud</p>
-			<p>47 minuten geleden.</p>
-			<img class="favorite" src="" alt="Favorite" width="30" height="30"/>
-			<img class="comment"src="" alt="Comment" width="30" height="30"/>
-		</section>
-		<div id="clearfix"></div>
-	</article>
-
-	<article id="answer">
-		<section class="profile-photo">
-			<img src="" alt="" width="75" height="75"/>
-		</section>
-		<section class="answer">
-			<p>Dit is het eerste antwoord op deze vraag!</p>
-			<p>Categorie Dak Onderhoud</p>
-			<p>47 minuten geleden.</p>
-			<img class="favorite" src="" alt="Favorite" width="30" height="30"/>
-			<img class="comment"src="" alt="Comment" width="30" height="30"/>
-		</section>
+			</section>
 		<div id="clearfix"></div>
 	</article>
 </section>
