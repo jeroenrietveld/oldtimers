@@ -27,6 +27,7 @@ group :assets do
   gem 'uglifier', '1.0.3'
 end
 
+gem 'select2-rails'
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks', '1.0.0'
 gem 'jbuilder', '1.0.1'
