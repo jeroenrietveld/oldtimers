@@ -1,3 +1,88 @@
+<section class="container">
+	<section class="row" id="question-form">
+		<section class="span1 offset2 profile-photo">
+			<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
+		</section>
+		<section class="span8 form">
+			<form method="post">
+				<div class="row">
+					<input class="" type="text" name="title" placeholder="Titel..."/>
+				</div>
+				<div class="row">
+					<textarea class="" name="question" placeholder="Beschrijf je vraag..." rows="15" cols="30"></textarea>
+				</div>
+				<div class="row">
+					<input class="keywords-input" type="text" name="keywords" placeholder="Keywords..."/>
+					<button class="">+</button>
+				</div>
+				<div class="row">
+					<select class="" name="categorie">
+						<option>Dak onderhoud</option>
+					</select>
+					<button class="" name="submit" type="submit">Vraag</button>
+				</div>
+			</form>
+		</section>
+	</section>
+</section>
+
+<section class="" id="questions">
+	<section class="container">
+		<div class="row">
+			<article class="" id="question">
+				<div class="row">
+					<section class="span1 offset2 profile-photo">
+						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
+					</section>
+					<section class="span7 question">
+						<p>Dit is het eerste antwoord op deze vraag!</p>
+						<p><strong>Categorie:</strong> Dak Onderhoud</p>
+						<p><i>47 minuten geleden.</i></p>
+						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
+						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
+					</section>
+				</div>
+			</article>
+		</div>
+
+		<div class="row">
+			<article class="span12" id="question">
+				<div class="row">
+					<section class="span1 offset2 profile-photo">
+						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
+					</section>
+					<section class="span7 question">
+						<p>Dit is het eerste antwoord op deze vraag!</p>
+						<p><strong>Categorie:</strong> Dak Onderhoud</p>
+						<p><i>47 minuten geleden.</i></p>
+						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
+						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
+					</section>
+				</div>
+			</article>
+		</div>
+
+		<div class="row">
+			<article class="span12" id="question">
+				<div class="row">
+					<section class="span1 offset2 profile-photo">
+						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
+					</section>
+					<section class="span7 question">
+						<p>Dit is het eerste antwoord op deze vraag!</p>
+						<p><strong>Categorie:</strong> Dak Onderhoud</p>
+						<p><i>47 minuten geleden.</i></p>
+						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
+						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
+					</section>
+				</div>
+			</article>
+		</div>
+	</section>
+</section>
+
+
+<!--
 <section id="question-form">
 	<section class="profile-photo">
 		<img src="" alt="" width="75" height="75"/>
@@ -15,7 +100,7 @@
 	</section>
 </section>
 
-<section id="questions">
+<section class="row" id="questions">
 	<article id="question">
 		<section class="profile-photo">
 			<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
@@ -24,8 +109,6 @@
 			<p>Dit is het eerste antwoord op deze vraag!</p>
 			<p>Categorie Dak Onderhoud</p>
 			<p>47 minuten geleden.</p>
-			<!--<img class="favorite" src="" alt="Favorite" width="30" height="30"/>
-			<img class="comment"src="" alt="Comment" width="30" height="30"/>-->
 			
 			<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
 			<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
@@ -34,3 +117,4 @@
 		<div id="clearfix"></div>
 	</article>
 </section>
+-->

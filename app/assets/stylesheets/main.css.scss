@@ -1,17 +1,89 @@
 @import "bootstrap";
 
 html, body {
-	height:100%;
 	width:100%;
+	height:100%;
 }
 
 #clearfix {clear:both;}
 
-section.container {
-	width:100%;
-	height:100%;
+.profile-photo {
+	text-align:left;
+}
+button {
+	height:30px;
+	margin-top:-10px;
 }
 
+section#question-form {
+	height:50%;
+	min-height:500px;
+	padding-top:50px;
+
+	section.form {
+		margin-left:40px;
+
+		form {
+			width:500px;
+		}
+
+		input, textarea {
+			width: 100%;
+		}
+		input.keywords-input {
+			width:75%;
+		}
+		select {
+			width: 60%;
+		}
+		button {
+			width: 20%;
+		}
+	}
+}
+
+section#questions {
+	background: #E3E3E3;
+	height:50%;
+	padding-top:50px;
+	
+	/*
+	position:absolute;
+	left:0;
+	right:0;
+	*/
+
+	article#question {
+		margin:10px 0;
+		margin-left:34.5%;
+		margin:10px auto;
+
+		.question {
+			position: relative;
+			border: 1px solid;
+			height:auto;
+			padding:11px;
+			background:#eee;
+
+			p {
+				margin:0;
+				font-size:13px;
+			}
+			.favorite {
+				position:absolute;
+				top:5px;
+				right:5px;
+			}
+			.comment {
+				position:absolute;
+				bottom:5px;
+				right:5px;
+			}
+		}
+	}
+}
+
+/*
 section#question-form {
 	width: 1000px;
 	height:50%;
@@ -95,6 +167,7 @@ section#questions {
 	}
 
 }
+*/
 
 /* mixins, variables, etc. */
 
