@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   	@question = Question.new(q_params)
 
   	if @question.save
-  		#saved
+  		redirect_to @question
   	else
   		render 'new'
   	end
