@@ -7,7 +7,9 @@
   <%= f.text_field :title %>
 
   <%= f.label :question %>
-  <%= f.text_area :question %>
+  <%= f.text_area :question %><br />
 
+	<%= collection_select(:question, :categories, Category.all, :id, :name, {}, { :multiple => true , :id => "categories_select"} )%>
+	
   <%= f.submit "Post question" %>
 <% end %>

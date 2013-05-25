@@ -10,6 +10,13 @@ class QuestionsController < ApplicationController
   def create
   	@question = Question.new(q_params)
 
+    params[:question][:categories].each do |p|
+      if !p.empty?
+        c = Category.find(p)
+        @question.categories << c if c
+      end
+    end
+
   	if @question.save
   		redirect_to @question
   	else

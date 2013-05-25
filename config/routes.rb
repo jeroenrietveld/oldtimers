@@ -1,4 +1,5 @@
 Oldtimers::Application.routes.draw do
+  get "categories/new"
   resources :questions
 
   root to: 'default_pages#home'

@@ -1,2 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+jQuery(function() {
+  $("#categories_select").select2({width: 200});
+});
