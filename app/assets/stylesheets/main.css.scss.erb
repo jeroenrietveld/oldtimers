@@ -5,10 +5,14 @@ html, body {
 	height:100%;
 }
 
-#clearfix {clear:both;}
-
+.clearfix {clear:both;}
+.relative {position: relative;}
 .profile-photo {
 	text-align:left;
+}
+.blue-border {
+	border: lightblue solid;
+	border-radius: 5px;
 }
 button {
 	height:30px;
@@ -27,14 +31,19 @@ section#question-form {
 			width:500px;
 		}
 
-		input, textarea {
+		input, select, textarea {
 			width: 100%;
 		}
-		input.keywords-input {
-			width:75%;
-		}
 		select {
-			width: 60%;
+			width: 534px;
+		}
+		.add-label-button {
+			background: url(<%= asset_path 'add_label3.png' %>) no-repeat;
+			position: absolute;
+			width: 30px;
+			top:13px;
+			right:-8px;
+			border:none;
 		}
 		button {
 			width: 20%;

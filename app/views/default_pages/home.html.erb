@@ -1,6 +1,6 @@
 <section class="container">
 	<section class="row" id="question-form">
-		<section class="span1 offset2 profile-photo">
+		<section class="span1 offset2 profile-photo blue-border">
 			<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
 		</section>
 		<section class="span8 form">
@@ -11,15 +11,17 @@
 				<div class="row">
 					<textarea class="" name="question" placeholder="Beschrijf je vraag..." rows="15" cols="30"></textarea>
 				</div>
-				<div class="row">
-					<input class="keywords-input" type="text" name="keywords" placeholder="Keywords..."/>
-					<button class="">+</button>
+				<div class="row relative">
+					<input class="label-input" type="text" name="label" placeholder="Label..."/>
+					<button class="add-label-button"></button>
 				</div>
 				<div class="row">
 					<select class="" name="categorie">
 						<option>Dak onderhoud</option>
 					</select>
-					<button class="" name="submit" type="submit">Vraag</button>
+				</div>
+				<div class="row">
+					<button class="pull-right" name="submit" type="submit">Vraag</button>
 				</div>
 			</form>
 		</section>
