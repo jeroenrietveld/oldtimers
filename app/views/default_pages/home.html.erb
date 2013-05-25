@@ -1,84 +1,39 @@
 <section class="container">
 	<section class="row" id="question-form">
-		<section class="span1 offset2 profile-photo blue-border">
-			<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
-		</section>
+		<%= render :partial => "shared/profile_image", :locals => { :border => 'blue-border', :name => 'Kees V.'} %>
 		<section class="span8 form">
-			<form method="post">
+			<%= form_for(@question) do |f| %>
+				<%= render 'shared/error_messages' %>
+
 				<div class="row">
-					<input class="" type="text" name="title" placeholder="Titel..."/>
-				</div>
+			  	<%= f.text_field :title, { :placeholder => "Titel..." } %>
+			  </div>
+
 				<div class="row">
-					<textarea class="" name="question" placeholder="Beschrijf je vraag..." rows="15" cols="30"></textarea>
-				</div>
+			  	<%= f.text_area :question, { :placeholder => "Beschrijf je vraag...", :rows => 5 } %>
+			  </div>
+
 				<div class="row relative">
 					<input class="label-input" type="text" name="label" placeholder="Label..."/>
 					<button class="add-label-button"></button>
 				</div>
-				<div class="row">
-					<select class="" name="categorie">
-						<option>Dak onderhoud</option>
-					</select>
+
+				<div class="row select-categories">
+					<%= collection_select(:question, :categories, Category.all, :id, :name, {}, 
+						{ :multiple => true , :id => "categories_select"} )
+					%>
 				</div>
-				<div class="row">
-					<button class="pull-right" name="submit" type="submit">Vraag</button>
-				</div>
-			</form>
+
+			  <%= f.submit "", { :class => "pull-right" } %>
+			<% end %>
 		</section>
 	</section>
 </section>
 
 <section class="" id="questions">
 	<section class="container">
-		<div class="row">
-			<article class="" id="question">
-				<div class="row">
-					<section class="span1 offset2 profile-photo">
-						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
-					</section>
-					<section class="span7 question">
-						<p>Dit is het eerste antwoord op deze vraag!</p>
-						<p><strong>Categorie:</strong> Dak Onderhoud</p>
-						<p><i>47 minuten geleden.</i></p>
-						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
-						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
-					</section>
-				</div>
-			</article>
-		</div>
-
-		<div class="row">
-			<article class="span12" id="question">
-				<div class="row">
-					<section class="span1 offset2 profile-photo">
-						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
-					</section>
-					<section class="span7 question">
-						<p>Dit is het eerste antwoord op deze vraag!</p>
-						<p><strong>Categorie:</strong> Dak Onderhoud</p>
-						<p><i>47 minuten geleden.</i></p>
-						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
-						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
-					</section>
-				</div>
-			</article>
-		</div>
-
-		<div class="row">
-			<article class="span12" id="question">
-				<div class="row">
-					<section class="span1 offset2 profile-photo">
-						<%= image_tag("anonymous.png", :alt => "Profile Picture", :class => "profile-photo", :width => "75", :height => "75") %>
-					</section>
-					<section class="span7 question">
-						<p>Dit is het eerste antwoord op deze vraag!</p>
-						<p><strong>Categorie:</strong> Dak Onderhoud</p>
-						<p><i>47 minuten geleden.</i></p>
-						<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
-						<%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
-					</section>
-				</div>
-			</article>
-		</div>
+		<% @questions.each do |q| %>
+			<%= render :partial => "shared/question_template", :locals => { :question => q } %>
+		<% end %>
 	</section>
 </section>

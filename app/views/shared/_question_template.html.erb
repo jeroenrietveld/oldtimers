@@ -1,0 +1,19 @@
+<div class="row">
+  <article class="" id="question">
+    <div class="row">
+      <%= render :partial => "shared/profile_image", :locals => { :border => 'green-border', :name => 'Naam A.'} %>
+      <section class="span7 question">
+        <p><%= question.title %></p>
+        <p>
+          <strong>Categorie:</strong>
+          <% question.categories.each_with_index do |c, i| %>
+            <%= c.name %><% if i+1 != question.categories.length %>, <% end %>
+          <% end %>
+        </p>
+        <p><i><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i></p>
+        <%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
+        <%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
+      </section>
+    </div>
+  </article>
+</div>
