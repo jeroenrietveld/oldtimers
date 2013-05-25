@@ -3,16 +3,25 @@
     <div class="row">
       <%= render :partial => "shared/profile_image", :locals => { :border => 'green-border', :name => 'Naam A.'} %>
       <section class="span7 question">
-        <p><%= question.title %></p>
-        <p>
-          <strong>Categorie:</strong>
-          <% question.categories.each_with_index do |c, i| %>
-            <%= c.name %><% if i+1 != question.categories.length %>, <% end %>
-          <% end %>
+        <div class="pull-left">
+          <p class="title"><%= question.title %></p>
+          
+          <p class="category">
+            <strong>Categorie:</strong>
+            <% question.categories.each_with_index do |c, i| %>
+              <%= c.name %><% if i+1 != question.categories.length %>, <% end %>
+            <% end %>
+          </p>
+        </div>
+        
+        <div class="pull-right">
+          <p>
+            <i><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i>
+          </p>
+          
+          <%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
+          <%= image_tag("comment.png", :alt => "Comment", :class => "comment", :width => 20, :height => 20 ) %>
         </p>
-        <p><i><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i></p>
-        <%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite") %>
-        <%= image_tag("comment.png", :alt => "Comment", :class => "comment") %>
       </section>
     </div>
   </article>
