@@ -5,7 +5,7 @@ class DefaultPagesController < ApplicationController
   	@question = Question.new
   	@questions = Question.find(:all, :order => "created_at DESC", :limit => 3)
   end
-
+  
   private
 
   	def get_css_file

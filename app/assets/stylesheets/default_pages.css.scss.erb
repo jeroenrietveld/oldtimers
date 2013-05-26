@@ -98,6 +98,13 @@ section#questions {
 			background: #fff;
 			box-shadow: 3px 3px 4px 0 #e0dfdf;
 
+			a {
+				text-decoration: none;
+				color: #626262;
+			}
+			a:hover{
+				color: #0088CC;
+			}
 			p {
 				margin:0;
 				font-size:13px;
@@ -105,17 +112,28 @@ section#questions {
 			p:first-letter{
 				text-transform: capitalize;
 			}
+
 			.title{
 				font-size: 16px;
 			}
 			.category{
 				font-size: 13px;
-				font-style: italic;
 				margin-top: 10px;
 			}
-			.favorite {
-			}
-			.comment {
+			.actions {
+				margin-top: 10px;
+
+				img:hover {
+					cursor: pointer;
+				}
+
+				.favorite {
+					float: right;
+				}
+				.comment {
+					float: right;
+					margin-left: 15px;
+				}
 			}
 		}
 	}
@@ -125,108 +143,16 @@ section#questions {
 	border-color: #D6D6D6;
 }
 
-/*
-section#question-form {
-	width: 1000px;
-	height:50%;
-	margin: 0 auto;
-	position: relative;
-	min-height:400px;
+.select2-container-multi .select2-choices .select2-search-choice {
+    background-image: -moz-linear-gradient(center top , #F8A5A6 20%, #E86C70 100%);
+    border-radius: 12px;
+    border: none;
+    color: #FFF;
+    padding: 5px 8px 5px 18px;
 
-	section.form {
-		width:100%;
-		position:absolute;
-		top:25%;
-		left:25%;
-		bottom:25%;
-		right:25%;
-
-		form {
-			width:500px;
-		}
-
-		input, textarea {
-			width: 100%;
-		}
-		select {
-			width: 60%;
-		}
-		button {
-			width: 30%;
-			float: right;
-		}
-	}
-
-	section.profile-photo {
-		width: 75px;
-		height: 75px;
-		position: absolute;
-		top: 25%;
-		left: 15%;
-		bottom:25%;
-		right:15%;
-	}
-}
-
-section#questions {
-	background: #E3E3E3;
-	padding-top: 50px;
-	height:50%;
-
-	article#question {
-		margin: 10px auto;
-		width: 1000px;
-
-		.profile-photo {
-			float: left;
-			background:#eee;
-		}
-
-		.question {
-			position:relative;
-			float: right;
-			border: 1px solid;
-			width:850px;
-			height:auto;
-			padding:11px;
-			background:#eee;
-
-			p {
-				margin:0;
-				font-size:14px;
-			}
-			.favorite {
-				position:absolute;
-				top:5px;
-				right:5px;
-			}
-			.comment {
-				position:absolute;
-				bottom:5px;
-				right:5px;
-			}
-		}
-	}
-
-}
-*/
-
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+    a{
+    	color: #FFF;
+    	margin-top: 2px;
+    	margin-left: 2px;
+    }
 }

@@ -11,6 +11,7 @@ class QuestionsController < ApplicationController
 
   def create
   	@question = Question.new(q_params)
+    @questions = Question.find(:all, :order => "created_at DESC", :limit => 3)
 
     params[:question][:categories].each do |p|
       if !p.empty?

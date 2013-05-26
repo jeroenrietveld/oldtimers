@@ -1,10 +1,10 @@
 <div class="row">
   <article class="" id="question">
     <div class="row">
-      <%= render :partial => "shared/profile_image", :locals => { :border => 'green-border', :name => 'Naam A.'} %>
+      <%= render :partial => "shared/profile_image", :locals => { :offset => '2', :border => 'green-border', :name => 'Naam A.'} %>
       <section class="span7 question">
         <div class="pull-left">
-          <p class="title"><%= question.title %></p>
+          <p class="title"><%= link_to question.title, question %></p>
           
           <p class="category">
             <strong>Categorie:</strong>
@@ -19,10 +19,25 @@
             <i><%= distance_of_time_in_words question.created_at, Time.now %> geleden</i>
           </p>
           
-          <p class="actions">
-            <%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
-            <%= image_tag("comment.png", :alt => "Comment", :class => "comment", :width => 20, :height => 20 ) %>
-          </p>
+          <div class="actions pull-right">
+            <div class="comment">
+              <% if index == 0 %>
+                <%= image_tag("comment_hover.png", :alt => "Comment", :width => 20, :height => 20 ) %>
+              <% else %>
+                <%= image_tag("comment.png", :alt => "Comment", :width => 20, :height => 20 ) %>
+              <% end %>
+              <span class="amt">2</span>
+            </div>
+            
+            <div class="favorite">
+              <% if index == 0 %>
+                <%= image_tag("favorite_hover.png", :alt => "Favorite", :width => 20, :height => 20 ) %> 
+              <% else %>
+                <%= image_tag("favorite.png", :alt => "Favorite", :width => 20, :height => 20 ) %> 
+              <% end %>
+              <span class="amt">5</span>
+            </div>
+          </div>
         </p>
       </section>
     </div>
