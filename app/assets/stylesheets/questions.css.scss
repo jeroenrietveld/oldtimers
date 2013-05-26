@@ -1,3 +1,22 @@
 // Place all the styles related to the Questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+body {
+	background:#ebebeb;
+
+	.question-card {
+		height: auto;
+		padding:20px;
+		background: #fff;
+		border-radius: 10px;
+
+		.title {
+			padding: 0px 0px 10px 0px;
+			margin: 0;
+			font-size: 30px;
+		}
+	}
+}

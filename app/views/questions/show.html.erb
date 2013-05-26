@@ -1,1 +1,17 @@
-<%= @question.title %>, <%= @question.question %>
+<section class="container">
+	<section class="question-area row relative">
+		<%= render :partial => "shared/profile_image", :locals => { :border => 'blue-border', :name => 'Kees V.'} %>
+		<article class="span8 question-card">
+			<header>
+				<h1 class="title">
+					<%= @question.title %>
+				</h1>
+			</header>
+			<div class="question">
+				<%= @question.question %>
+			</div>
+			<hr class="line">
+			<span class="category">Categorie</span>
+		</article>
+	</section>
+</section>
