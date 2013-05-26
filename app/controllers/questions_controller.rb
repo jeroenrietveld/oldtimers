@@ -1,17 +1,19 @@
 class QuestionsController < ApplicationController
-  before_filter :get_css_file
-
 	def show
 		@question = Question.find(params[:id])
+    @css = 'questions'
 	end
 
   def new
   	@question = Question.new
+    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
+    @css = 'default_pages'
   end
 
   def create
   	@question = Question.new(q_params)
-    @questions = Question.find(:all, :order => "created_at DESC", :limit => 3)
+    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
+    @css = 'default_pages'
 
     params[:question][:categories].each do |p|
       if !p.empty?
@@ -32,8 +34,4 @@ class QuestionsController < ApplicationController
   	def q_params
   		params.require(:question).permit(:title, :question)
   	end
-
-    def get_css_file
-      @css = 'questions'
-    end
 end

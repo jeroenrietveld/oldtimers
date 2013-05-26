@@ -2,7 +2,7 @@ Oldtimers::Application.routes.draw do
   get "categories/new"
   resources :questions
 
-  root to: 'default_pages#home'
+  root to: 'questions#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

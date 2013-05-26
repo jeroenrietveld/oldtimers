@@ -35,3 +35,14 @@ nl:
       x_seconds:
         one: 1 seconde
         other: ! '%{count} seconden'
+  activerecord:
+    errors:
+      models:
+        question:
+          attributes:
+            title:
+              blank: 'Vul een titel in'
+            question:
+              blank: 'Vul een beschrijving in'
+            categories:
+              blank: 'Geef minstens 1 categorie aan'
