@@ -7,11 +7,9 @@
 
 @import "bootstrap";
 
-.padded {padding:20px;}
-
 body {
-	background: #ebebeb;
 	font-family: InterFace;
+	background: #F5F5F5;
 
 	.question-area{
 		padding: 50px 0px 0px 0px;
@@ -27,8 +25,8 @@ body {
 				padding: 5px 0px;
 			}
 			.right {
-				text-align: right;
-				margin-left: 538px;
+				text-align:right;
+				margin-left:458px;
 			}
 		}
 		.end {
@@ -36,7 +34,7 @@ body {
 
 			.right {
 				text-align: right;
-				margin-left: 458px;
+				margin-left: 378px;
 			}
 		}
 	}
@@ -56,7 +54,7 @@ body {
 	}
 
 	.comment-form {
-		background: #E5E6E7;
+		background: #E7E5E6;
 		border-top: 2px solid #CACACB;
 		border-bottom: 2px solid #CACACB;
 		padding: 50px 0px;
@@ -70,7 +68,7 @@ body {
 				resize: none;
 			}
 			.buttons {
-				width:740px;
+				width:660px;
 
 				button {
 				background: #fff;
@@ -104,7 +102,7 @@ body {
 					border:1px solid #ccc;
 					padding: 20px 0px 20px 20px;
 					border-radius: 20px;
-					width: 638px;
+					width: 558px;
 				}
 				.time {
 					margin-left: 5px;
@@ -115,11 +113,11 @@ body {
 				section.profile-photo {
 					float: right;
 					margin-left: 20px;
-					margin-right:20px;
+					margin-right:100px;
 				}
 
 				.chosen-answer {
-					right: 0px;
+					right: 80px;
 				}
 
 				.comment-card {
