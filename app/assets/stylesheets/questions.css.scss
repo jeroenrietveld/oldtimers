@@ -95,10 +95,18 @@ body {
 
 			.comment {
 				margin: 25px 0px;
+
+				.chosen-answer {
+					position: absolute;
+					top: 7px;
+					width: 20px;
+				}
+
 				.comment-card {
 					background: #fff;
 					border:1px solid #ccc;
-					padding: 20px;
+					padding: 20px 0px 20px 20px;
+					border-radius: 20px;
 				}
 				.time {
 					margin-left:5px;
@@ -110,14 +118,26 @@ body {
 					float: right;
 					margin-left: 20px;
 				}
+
+				.chosen-answer {
+					right: -25px;
+				}
+
 				.comment-card {
 					float:right;
 					text-align:right;
 					margin-left:0px;
+					padding: 20px 20px 20px 0px;
 				}
 				.time {
 					float:left;
 					margin-left:168px;
+				}
+			}
+
+			.comment:nth-child(odd) {
+				.chosen-answer {
+					left: 145px;
 				}
 			}
 		}

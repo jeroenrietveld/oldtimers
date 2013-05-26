@@ -46,8 +46,12 @@
 </section>
 
 <section class="comments">
-	<div class="row relative container">
-		<section class="comment">
+	<div class="row container">
+		<section class="relative comment">
+			<div class="chosen-answer">
+				<span class="amount">12</span>
+				<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
+			</div>
 			<%= render :partial => "shared/profile_image", :locals => { :border => 'blue-border', :name => 'Kees V.'} %>
 			<article class="span7 comment-card">
 				<div class="card">
@@ -58,7 +62,11 @@
 			<div class="clearfix"></div>
 		</section>
 
-		<section class="comment">
+		<section class="relative comment">
+			<div class="chosen-answer">
+				<span class="amount">10</span>
+				<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
+			</div>
 			<%= render :partial => "shared/profile_image", :locals => { :border => 'blue-border', :name => 'Kees V.'} %>
 			<article class="span7 comment-card">
 				<div class="card">
