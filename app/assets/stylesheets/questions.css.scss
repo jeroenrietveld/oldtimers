@@ -70,13 +70,16 @@ body {
 				margin-bottom:0;
 				padding: 0 42px 0 10px;
 				resize: none;
+				border-top-left-radius:10px;
+				border-top-right-radius:10px;
 			}
 			.buttons {
 				width:660px;
 
-				button {
+
+				button, .button {
 				background: #fff;
-				width: 50%;
+				width: 220px;
 				float: left;
 				border: 1px solid #ccc;
 				border-top: none;
@@ -84,6 +87,11 @@ body {
 				}
 				:first-child {
 					border-right:none;
+					border-bottom-left-radius: 10px;
+				}
+				:last-child {
+					border-bottom-right-radius: 10px;
+					border-left: none;
 				}
 			}
 			
