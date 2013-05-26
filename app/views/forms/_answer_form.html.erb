@@ -2,9 +2,7 @@
 	<%= render 'shared/error_messages' %>
 
 	<%= f.fields_for :answers do |builder| %>
-		<div class="row">
-	  	<%= builder.text_area :answer, { :placeholder => "Antwoord...", :cols => 30, :rows => 10 } %>
-	  </div>
+	 	<%= builder.text_area :answer, { :placeholder => "Antwoord...", :class => "span9", :cols => 30, :rows => 10 } %>
 	<% end %>
 
   <%= f.submit "Antwoord" %>
