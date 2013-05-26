@@ -10,12 +10,15 @@
 body {
 	font-family: InterFace;
 	background: #F5F5F5;
+	color: #767676;
 
 	.question-area{
 		padding: 50px 0px 0px 0px;
+		color: #555455;
 
 		.check-icon {
-			height: 20px;
+			height: 12px;
+			margin-right: 5px;
 		}
 
 		.line {
@@ -25,12 +28,12 @@ body {
 
 		.extra {
 			margin: 0;
-			.left, .right {
+			.top-info {
 				padding: 5px 0px;
 			}
-			.right {
-				text-align:right;
-				margin-left:458px;
+			.date {
+				text-align: right;
+				margin-left: 380px;
 			}
 		}
 		.end {
@@ -45,7 +48,7 @@ body {
 
 	.question-card {
 		height: auto;
-		padding: 20px;
+		padding: 10px 20px;
 		background: #fff;
 		border-radius: 5px;
 		box-shadow: 3px 3px 4px 0 #e0dfdf;
@@ -53,7 +56,8 @@ body {
 		.title {
 			padding: 0px 0px 10px 0px;
 			margin: 0;
-			font-size: 30px;
+			font-size: 24px;
+			font-weight: normal;
 		}
 	}
 
@@ -68,7 +72,7 @@ body {
 			textarea {
 				margin-left: 20px;
 				margin-bottom:0;
-				padding: 0 42px 0 10px;
+				padding: 10px 42px 0 10px;
 				resize: none;
 				border-top-left-radius:10px;
 				border-top-right-radius:10px;

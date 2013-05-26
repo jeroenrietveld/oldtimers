@@ -47,4 +47,4 @@ nl:
             categories:
               blank: 'Geef minstens 1 categorie aan'
             answers:
-              blank: 'Voer een antwoord in'
+              invalid: 'Voer een antwoord in'
