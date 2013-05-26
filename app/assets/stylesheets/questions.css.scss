@@ -14,6 +14,10 @@ body {
 	.question-area{
 		padding: 50px 0px 0px 0px;
 
+		.check-icon {
+			height: 20px;
+		}
+
 		.line {
 			width: 660px;
 			margin: 20px 0px 0px -20px;
@@ -87,7 +91,7 @@ body {
 	}
 
 	.comments {
-		.container{			
+		.container{
 			.comment {
 				margin: 25px 0px;
 

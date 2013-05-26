@@ -1,7 +1,11 @@
 <section class="question-area relative">
 	<div class="container">
 		<div class="row extra">
-			<span class="span1 offset2 left">Beantwoord</span>
+			<span class="span1 offset2 left">
+				<% if @question.answers.length > 0%>
+					<img class="check-icon" src=<%= asset_path 'check_icon.png' %> />Beantwoord
+				<% end %>
+			</span>
 			<i class="span2 offset5 right"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
 			<div class="clearfix"></div>
 		</div>
