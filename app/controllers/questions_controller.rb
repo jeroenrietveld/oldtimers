@@ -6,13 +6,13 @@ class QuestionsController < ApplicationController
 
   def new
   	@question = Question.new
-    @questions = Question.find(:all, :order => "created_at DESC", :limit => 3)
+    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
     @css = 'default_pages'
   end
 
   def create
   	@question = Question.new(q_params)
-    @questions = Question.find(:all, :order => "created_at DESC", :limit => 3)
+    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
     @css = 'default_pages'
 
     params[:question][:categories].each do |p|
