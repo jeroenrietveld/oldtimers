@@ -1,15 +1,39 @@
-<h1>New</h1>
+<section class="container">
+	<section class="row" id="question-form">
+		<%= render :partial => "shared/profile_image", :locals => { :offset => '2', :border => 'blue-border', :name => 'Kees V.'} %>
+		<section class="span8 form">
+			<%= form_for @question  do |f| %>
+				<%= render 'shared/error_messages' %>
 
-<%= form_for(@question) do |f| %>
-	<%= render 'shared/error_messages' %>
+				<div class="row">
+			  	<%= f.text_field :title, { :placeholder => "Titel..." } %>
+			  </div>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+				<div class="row">
+			  	<%= f.text_area :question, { :placeholder => "Beschrijf je vraag...", :rows => 7 } %>
+			  </div>
 
-  <%= f.label :question %>
-  <%= f.text_area :question %><br />
+				<div class="row relative">
+					<input class="label-input" type="text" name="label" placeholder="Label..."/>
+					<button class="add-label-button"></button>
+				</div>
 
-	<%= collection_select(:question, :categories, Category.all, :id, :name, {}, { :multiple => true , :id => "categories_select"} )%>
-	
-  <%= f.submit "Post question" %>
-<% end %>
+				<div class="row select-categories">
+					<%= collection_select(:question, :categories, Category.all, :id, :name, {}, 
+						{ :multiple => true , :id => "categories_select"} )
+					%>
+				</div>
+
+			  <%= f.submit "", { :class => "pull-right" } %>
+			<% end %>
+		</section>
+	</section>
+</section>
+
+<section class="" id="questions">
+	<section class="container">
+		<% @questions.each_with_index do |q, i| %>
+			<%= render :partial => "shared/question_template", :locals => { :question => q, :index => i } %>
+		<% end %>
+	</section>
+</section>
