@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_filter :get_css_file
+
 	def show
 		@question = Question.find(params[:id])
 	end
@@ -29,4 +31,8 @@ class QuestionsController < ApplicationController
   	def q_params
   		params.require(:question).permit(:title, :question)
   	end
+
+    def get_css_file
+      @css = 'questions'
+    end
 end
