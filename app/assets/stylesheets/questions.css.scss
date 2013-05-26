@@ -15,11 +15,16 @@ body {
 
 		.extra {
 			margin:0;
-
+			.left, .right {
+				padding:5px 0px;
+			}
 			.right {
 				text-align:right;
 				margin-left:458px;
 			}
+		}
+		.end {
+			padding: 50px 0px 0px 0px;
 		}
 	}
 
@@ -33,6 +38,45 @@ body {
 			padding: 0px 0px 10px 0px;
 			margin: 0;
 			font-size: 30px;
+		}
+	}
+
+	.comment-form {
+		background: #E5E6E7;
+		border-top: 2px solid #CACACB;
+		border-bottom: 2px solid #CACACB;
+		padding: 50px 0px 25px 0px;
+
+		.container {
+			width: 960px;
+
+			section.profile-photo {
+				margin-left: 168px;
+			}
+
+			textarea {
+				margin-left: 20px;
+				margin-bottom:0;
+				padding: 0 47px 0 5px;
+				resize: none;
+			}
+			.buttons {
+				width:660px;
+				margin-left:248px;
+
+				button {
+				background: #fff;
+				width: 50%;
+				float: left;
+				border: 1px solid #ccc;
+				border-top: none;
+				height: 40px;
+				}
+				:first-child {
+					border-right:none;
+				}
+			}
+			
 		}
 	}
 }

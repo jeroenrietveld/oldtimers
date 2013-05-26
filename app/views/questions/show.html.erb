@@ -24,5 +24,23 @@
 			<span class="span2 offset5 right">Delen</span>
 			<div class="clearfix"></div>
 		</div>
+		<div class="end">
+			<span class="span2 offset3 left">4 Reacties</span>
+			<span class="span2 offset5 right">Beoordeling</span>
+			<div class="clearfix"></div>
+		</div>
 	</section>
+</section>
+
+<section class="comment-form">
+	<div class="row relative container">
+		<%= render :partial => "shared/profile_image", :locals => { :border => 'blue-border', :name => 'Kees V.'} %>
+		<form method="post">
+			<textarea class="span8" name="comment" placeholder="Klik om te reageren..." rows="10" cols="30"></textarea>
+			<div class="span8 offset3 buttons">
+				<button>test</button>
+				<button>test</button>
+			</div>
+		</form>
+	</div>
 </section>
