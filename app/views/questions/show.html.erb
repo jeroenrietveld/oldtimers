@@ -35,13 +35,14 @@
 <section class="comment-form">
 	<div class="row relative container">
 		<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => 'Kees V.'} %>
-		<form method="post">
+		<!--<form method="post">
 			<textarea class="span8" name="comment" placeholder="Klik om te reageren..." rows="10" cols="30"></textarea>
 			<div class="span8 offset3 buttons">
 				<button>test</button>
 				<button>test</button>
 			</div>
-		</form>
+		</form>-->
+		<%= render :partial => "forms/answer_form" %>
 	</div>
 </section>
 
@@ -52,7 +53,7 @@
 				<span class="amount">12</span>
 				<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
 			</div>
-			<%= render :partial => "shared/profile_image", :locals => { :offset => '2', :border => 'blue-border', :name => 'Kees V.'} %>
+			<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => 'Kees V.'} %>
 			<article class="span6 comment-card">
 				<div class="card">
 					<p>Deze auto zou je kunnen laten ombouwen in Rotterdam bij het FabLab van de Hogeschool Rotterdam. Zij zijn erg bekwaam in alles wat te maken heeft met elektronica.</p>

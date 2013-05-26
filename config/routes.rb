@@ -1,6 +1,7 @@
 Oldtimers::Application.routes.draw do
   get "categories/new"
   resources :questions
+  resources :answers
 
   root to: 'questions#new'
   # The priority is based upon order of creation: first created -> highest priority.

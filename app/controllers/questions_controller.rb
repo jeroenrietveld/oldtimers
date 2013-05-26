@@ -29,9 +29,27 @@ class QuestionsController < ApplicationController
   	end
   end
 
+  def update
+    @answer = Answer.new(a_params)
+    @answer.author = "Kees V"
+    @question = Question.find(params[:id])
+    @question.answers << @answer
+    @css = 'questions'
+
+    if @question.save
+      redirect_to @question
+    else
+      render 'show'
+    end
+  end
+
   private
 
   	def q_params
   		params.require(:question).permit(:title, :question)
   	end
+
+    def a_params
+      params.require(:question).require(:answers).permit(:answer)
+    end
 end
