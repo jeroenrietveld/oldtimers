@@ -4,3 +4,35 @@
 /*
  *= require main
  */
+
+@import "bootstrap";
+
+body {
+	background:#ebebeb;
+
+	.question-area{
+		padding:50px 0px 0px 0px;
+
+		.extra {
+			margin:0;
+
+			.right {
+				text-align:right;
+				margin-left:458px;
+			}
+		}
+	}
+
+	.question-card {
+		height: auto;
+		padding:20px;
+		background: #fff;
+		border-radius: 5px;
+
+		.title {
+			padding: 0px 0px 10px 0px;
+			margin: 0;
+			font-size: 30px;
+		}
+	}
+}
