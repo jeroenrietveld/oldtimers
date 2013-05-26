@@ -1,13 +1,12 @@
-<section class="container">
-	<section class="question-area row relative">
-		
+<section class="question-area relative">
+	<div class="container">
 		<div class="row extra">
-			<span class="span1 offset3 left">Beantwoord</span>
+			<span class="span1 offset2 left">Beantwoord</span>
 			<i class="span2 offset6 right">16:00 26/05/2013</i>
 			<div class="clearfix"></div>
 		</div>
 		<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => 'Kees V.'} %>
-		<article class="span8 question-card">
+		<article class="span9 question-card">
 			<header>
 				<h1 class="title">
 					<%= @question.title %>
@@ -20,26 +19,26 @@
 			<span class="category">Categorie</span>
 		</article>
 		<div class="row extra">
-			<span class="span1 offset3 left">Favorite</span>
+			<span class="span1 offset2 left"><%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %></span>
 			<span class="span2 offset5 right">Delen</span>
 			<div class="clearfix"></div>
 		</div>
 		<div class="end">
-			<span class="span2 offset3 left">4 Reacties</span>
+			<span class="span2 offset2 left">4 Reacties</span>
 			<span class="span2 offset5 right">Beoordeling</span>
 			<div class="clearfix"></div>
 		</div>
-		</section>
+	</section>
 </section>
 
 <section class="comment-form">
 	<div class="row relative container">
 		<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => 'Kees V.'} %>
 		<form method="post">
-			<textarea class="span8" name="comment" placeholder="Klik om te reageren..." rows="10" cols="30"></textarea>
-			<div class="span8 offset3 buttons">
-				<button>test</button>
-				<button>test</button>
+			<textarea class="span9" name="comment" placeholder="Klik om te reageren..." rows="10" cols="30"></textarea>
+			<div class="span8 offset2 buttons">
+				<button>Bedrijf toevoegen</button>
+				<button>Product toevoegen</button>
 			</div>
 		</form>
 	</div>
@@ -52,7 +51,7 @@
 				<span class="amount">12</span>
 				<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
 			</div>
-			<%= render :partial => "shared/profile_image", :locals => { :offset => '2', :border => 'blue-border', :name => 'Kees V.'} %>
+			<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => 'Kees V.'} %>
 			<article class="span6 comment-card">
 				<div class="card">
 					<p>Deze auto zou je kunnen laten ombouwen in Rotterdam bij het FabLab van de Hogeschool Rotterdam. Zij zijn erg bekwaam in alles wat te maken heeft met elektronica.</p>
@@ -73,7 +72,7 @@
 					<p>Deze auto zou je kunnen laten ombouwen in Rotterdam bij het FabLab van de Hogeschool Rotterdam. Zij zijn erg bekwaam in alles wat te maken heeft met elektronica.</p>
 				</div>
 			</article>
-			<span class="time">18:30 <br> 26-05-2013</span>
+			<span class="span1 offset1 time">18:30 <br> 26-05-2013</span>
 			<div class="clearfix"></div>
 		</section>
 	</div>

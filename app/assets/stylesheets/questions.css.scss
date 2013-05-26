@@ -27,7 +27,7 @@ body {
 			}
 			.right {
 				text-align:right;
-				margin-left:458px;
+				margin-left:538px;
 			}
 		}
 		.end {
@@ -35,7 +35,7 @@ body {
 
 			.right {
 				text-align: right;
-				margin-left: 377px;
+				margin-left: 458px;
 			}
 		}
 	}
@@ -60,21 +60,15 @@ body {
 		padding: 50px 0px;
 
 		.container {
-			width: 960px;
-
-			section.profile-photo {
-				margin-left: 168px;
-			}
 
 			textarea {
 				margin-left: 20px;
 				margin-bottom:0;
-				padding: 0 47px 0 5px;
+				padding: 0 42px 0 10px;
 				resize: none;
 			}
 			.buttons {
-				width:660px;
-				margin-left:248px;
+				width:740px;
 
 				button {
 				background: #fff;
@@ -93,13 +87,7 @@ body {
 	}
 
 	.comments {
-		.container{
-			width: 960px;
-			
-			section.profile-photo {
-				margin-left: 168px;
-			}
-
+		.container{			
 			.comment {
 				margin: 25px 0px;
 
@@ -114,7 +102,7 @@ body {
 					border:1px solid #ccc;
 					padding: 20px 0px 20px 20px;
 					border-radius: 20px;
-					width: 540px;
+					width: 638px;
 				}
 				.time {
 					margin-left: 5px;
@@ -125,11 +113,11 @@ body {
 				section.profile-photo {
 					float: right;
 					margin-left: 20px;
-					margin-right:70px;
+					margin-right:20px;
 				}
 
 				.chosen-answer {
-					right: 45px;
+					right: 0px;
 				}
 
 				.comment-card {
@@ -140,13 +128,15 @@ body {
 				}
 				.time {
 					float:left;
-					margin-left:168px;
+					text-align: right;
+					margin-left:100px;
+					width:75px;
 				}
 			}
 
 			.comment:nth-child(odd) {
 				.chosen-answer {
-					left: 145px;
+					left: 80px;
 				}
 				.time {
 					text-align:right;
