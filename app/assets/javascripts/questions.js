@@ -4,6 +4,12 @@ jQuery(function() {
   	placeholder: 'Categorie...'
   });
 
+  $("img.favorite").hover(function(){
+    $(this).attr('src', '/assets/favorite_hover.png');
+  }, function(){
+    $(this).attr('src', '/assets/favorite.png');
+  });
+
   /*$(".favorite img").hover(function(){
   	$(this).attr('src', '/assets/favorite_hover.png');
   }, function(){
