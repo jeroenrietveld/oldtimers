@@ -1,4 +1,4 @@
-set :bundle_flags, "--quiet"
+require "rvm/capistrano"
 require "bundler/capistrano" 
 
 set :application, "oldtimer"
