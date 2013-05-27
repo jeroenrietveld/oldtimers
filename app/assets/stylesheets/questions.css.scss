@@ -28,6 +28,10 @@ body {
 
 		.extra {
 			margin: 0;
+
+			img.favorite, .sharing{
+				cursor:pointer;
+			}
 			.top-info {
 				padding: 5px 0px;
 			}
