@@ -218,6 +218,6 @@ DEPENDENCIES
   select2-rails
   selenium-webdriver (= 2.0)
   spork-rails!
-  sqlite3 (= 1.3.7)
+  sqlite3
   turbolinks (= 1.0.0)
   uglifier (= 1.0.3)
