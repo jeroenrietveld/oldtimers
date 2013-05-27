@@ -1,12 +1,12 @@
 <section class="question-area relative">
 	<div class="container">
 		<div class="row extra">
-			<span class="span1 offset2 left">
+			<span class="span2 offset2 top-info">
 				<% if @question.answers.length > 0%>
 					<img class="check-icon" src=<%= asset_path 'check_icon.png' %> />Beantwoord
 				<% end %>
 			</span>
-			<i class="span2 offset5 right"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
+			<i class="span2 top-info date"><%= @question.created_at.strftime('%H:%M %m/%d/%Y') %></i>
 			<div class="clearfix"></div>
 		</div>
 		
@@ -32,7 +32,9 @@
 		</div>
 		
 		<div class="end">
-			<span class="span2 offset2 left">4 Reacties</span>
+			<span class="span2 offset2 left">
+				<%= QuestionsHelper.pluralize(@question.answers.length, 'Reactie') %>
+			</span>
 			<span class="span2 offset5 right">Beoordeling</span>
 			<div class="clearfix"></div>
 		</div>
