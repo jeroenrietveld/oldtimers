@@ -2,7 +2,7 @@
 	<%= render 'shared/error_messages' %>
 
 	<%= f.fields_for :answers do |builder| %>
-	 	<%= builder.text_area :answer, { :placeholder => "Klik om te reageren...", :class => "span8", :rows => 8 } %>
+	 	<%= builder.text_area :answer, { :placeholder => "Klik om te reageren...", :class => "span8", :rows => 6 } %>
 	<% end %>
 
 	<div class="span8 offset2 buttons">
