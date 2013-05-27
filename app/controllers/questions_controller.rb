@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
 
   def new
   	@question = Question.new
+    3.times { @question.labels.build }
     @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
     @css = 'default_pages'
   end

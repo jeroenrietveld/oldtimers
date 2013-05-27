@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130526194030) do
+ActiveRecord::Schema.define(version: 20130527131605) do
 
   create_table "answers", force: true do |t|
     t.text     "answer"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20130526194030) do
 
   add_index "categories_questions", ["category_id"], name: "index_categories_questions_on_category_id"
   add_index "categories_questions", ["question_id"], name: "index_categories_questions_on_question_id"
+
+  create_table "labels", force: true do |t|
+    t.string   "name"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "labels", ["question_id", "created_at"], name: "index_labels_on_question_id_and_created_at"
 
   create_table "questions", force: true do |t|
     t.string   "title"

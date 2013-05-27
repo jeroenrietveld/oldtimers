@@ -12,6 +12,7 @@ group :development, :test do
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
+  gem "capistrano"
 end
 
 group :test do

@@ -14,6 +14,10 @@
 		<button class="add-label-button"></button>
 	</div>
 
+	<%= f.fields_for :labels do |builder| %>
+    <%= builder.hidden_field :label %>
+  <% end %>
+
 	<div class="row select-categories">
 		<%= collection_select(:question, :categories, Category.all, :id, :name, {}, 
 			{ :multiple => true , :id => "categories_select"} )
