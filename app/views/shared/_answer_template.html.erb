@@ -1,0 +1,14 @@
+<section class="relative comment <%= classes %>">
+	<div class="chosen-answer">
+		<span class="amount">12</span>
+		<%= image_tag("favorite.png", :alt => "Favorite", :class => "favorite", :width => 20, :height => 20 ) %>
+	</div>
+	<%= render :partial => "shared/profile_image", :locals => { :offset => '1', :border => 'blue-border', :name => answer.author} %>
+	<article class="comment-card">
+		<div class="card">
+			<p><%= answer.answer %></p>
+		</div>
+	</article>
+	<div class="span2 time"><%= answer.created_at.strftime('%H:%M') %><br /><%= answer.created_at.strftime('%m/%d/%Y') %></div>
+	<div class="clearfix"></div>
+</section>

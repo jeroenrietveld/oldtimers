@@ -83,7 +83,6 @@ body {
 			.buttons {
 				width:660px;
 
-
 				button, .button {
 				background: #fff;
 				width: 220px;
@@ -91,7 +90,16 @@ body {
 				border: 1px solid #ccc;
 				border-top: none;
 				height: 40px;
+	
+					img {
+						margin-right: 10px;
+					}
 				}
+
+				button:hover, input[type=submit]:hover {
+					background: #eee;
+				}
+
 				:first-child {
 					border-right:none;
 					border-bottom-left-radius: 4px;
@@ -118,17 +126,19 @@ body {
 
 				.comment-card {
 					background: #fff;
-					border:1px solid #ccc;
-					padding: 20px 0px 20px 20px;
+					padding: 20px 20px 20px 20px;
+					min-width: 200px;
+					box-shadow: 2px 2px 5px 0 #e0dfdf;
 					border-radius: 20px;
-					width: 558px;
+					max-width: 540px;
+			    float: left;
 				}
 				.time {
 					margin-left: 5px;
 				}
 			}
 
-			.comment:nth-child(even) {
+			.comment-poster {
 				section.profile-photo {
 					float: right;
 					margin-left: 20px;
@@ -140,25 +150,25 @@ body {
 				}
 
 				.comment-card {
-					float:right;
-					text-align:right;
-					margin-left:0px;
-					padding: 20px 20px 20px 0px;
+					float: right;
+					text-align: right;
 				}
 				.time {
-					float:left;
 					text-align: right;
-					margin-left:100px;
-					width:75px;
+					margin: 5px;
+					float: right;
 				}
 			}
 
-			.comment:nth-child(odd) {
+			.comment-answer {
+				.comment-card {
+					margin-left: 20px;
+				}
 				.chosen-answer {
 					left: 80px;
 				}
 				.time {
-					text-align:right;
+					text-align: left;
 				}
 			}
 		}

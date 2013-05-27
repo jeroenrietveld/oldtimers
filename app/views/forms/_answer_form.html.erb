@@ -6,8 +6,13 @@
 	<% end %>
 
 	<div class="span8 offset2 buttons">
-		<button><%= image_tag("location_marker.png", :alt => "Bedrijf toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Bedrijf toevoegen</button>
-		<button><%= image_tag("add_icon.png", :alt => "Product toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Product toevoegen</button>
+		<button>
+			<%= image_tag("location_marker.png", :alt => "Bedrijf toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> Bedrijf toevoegen
+		</button>
+		<button>
+			<%= image_tag("add_icon.png", :alt => "Product toevoegen", :class => "button-image", :width => 15, :height => 15 ) %> 
+			Product toevoegen
+		</button>
 		<%= f.submit "Antwoord", :class => 'button' %>
 	</div>
 <% end %>
