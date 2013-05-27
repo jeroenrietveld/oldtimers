@@ -1,7 +1,7 @@
 require "bundler/capistrano" 
 
 set :application, "oldtimer"
-set :domain,      "oldtimer.dev-this.com"
+set :domain,      "dev-this.com"
 set :deploy_to,   "/home/wesley/domains/#{domain}/public_html/oldtimer"
 set :use_sudo,    false
 
