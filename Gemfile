@@ -27,6 +27,7 @@ group :assets do
   gem 'uglifier', '1.0.3'
 end
 
+gem 'therubyracer'
 gem 'sqlite3'
 gem 'select2-rails'
 gem 'jquery-rails', '2.2.1'
