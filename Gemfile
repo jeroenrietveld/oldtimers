@@ -6,7 +6,6 @@ gem 'bootstrap-sass', '2.3.0.1'
 gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', github: 'railstutorial/spork-rails'
@@ -28,6 +27,7 @@ group :assets do
   gem 'uglifier', '1.0.3'
 end
 
+gem 'sqlite3', '1.3.7'
 gem 'select2-rails'
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks', '1.0.0'
@@ -35,4 +35,5 @@ gem 'jbuilder', '1.0.1'
 
 group :production do
   gem 'pg', '0.14.1'
+  gem 'sqlite3'
 end

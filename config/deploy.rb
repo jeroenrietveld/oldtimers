@@ -1,3 +1,4 @@
+set :bundle_flags, "--quiet"
 require "bundler/capistrano" 
 
 set :application, "oldtimer"
