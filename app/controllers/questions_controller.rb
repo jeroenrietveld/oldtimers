@@ -6,18 +6,14 @@ class QuestionsController < ApplicationController
 
   def new
   	@question = Question.new
-    3.times { @question.labels.build }
-    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
-    @css = 'default_pages'
+    prepare_for_question_form
   end
 
   def create
   	@question = Question.new(q_params)
-    @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
-    @css = 'default_pages'
 
     params[:question][:categories].each do |p|
-      if !p.empty?
+      unless p.empty?
         c = Category.find(p)
         @question.categories << c if c
       end
@@ -26,6 +22,7 @@ class QuestionsController < ApplicationController
   	if @question.save
   		redirect_to @question
   	else
+      prepare_for_question_form
   		render 'new'
   	end
   end
@@ -45,6 +42,12 @@ class QuestionsController < ApplicationController
   end
 
   private
+
+    def prepare_for_question_form
+      3.times { @question.labels.build }
+      @questions = Question.find(:all, :order => "created_at DESC", :limit => 5)
+      @css = 'default_pages'
+    end
 
   	def q_params
   		params.require(:question).permit(:title, :question)
