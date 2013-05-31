@@ -1,6 +1,9 @@
+require "bundler/capistrano"	
+
 set :application, "oldtimers"
 set :repository, "git@github.com:jeroenrietveld/oldtimers.git"
 set :scm, :git
+set :branch, "develop"
 
 default_run_options[:pty] = true
 
@@ -23,4 +26,12 @@ desc "check production task"
 			exit
 		end
 	end
+end
+
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
 end
